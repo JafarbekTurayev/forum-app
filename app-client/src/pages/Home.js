@@ -13,18 +13,20 @@ const Home = () => {
     }
     return (
         <div>
-            {
-                localStorage.getItem("token") !== null ?
-                    <div>
-                        <h1>Home ga xush kelibsz!</h1>
-                        <Link to="/myQuestions">Mening Savollarim</Link>
-                        <br/>
-                        <Link to="questions">barcha Savollar</Link>
-                        <br/>
-                        <Button onClick={logout}>Chiqish</Button>
-                    </div>
-                    : <Login/>
-            }
+            <div className="container">
+                {
+                    localStorage.getItem("token") !== null ?
+                        <div>
+                            <h1>Home ga xush kelibsz!</h1>
+                            <Link to="/myQuestions">Mening Savollarim</Link>
+                            <br/>
+                            <Link to="questions">barcha Savollar</Link>
+                            <br/>
+                            <Button onClick={logout}>Chiqish</Button>
+                        </div>
+                        : <Login/>
+                }
+            </div>
         </div>
     );
 };

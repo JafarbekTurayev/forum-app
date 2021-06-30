@@ -22,13 +22,15 @@ const Login = () => {
 
         return (
             <div>
-                <AvForm onValidSubmit={login}>
-                    {/* With AvField */}
-                    <AvField name="username" label="UserName" required/>
-                    <AvField name="password" label="Password" required/>
-                    <Button type="submit">Kirish</Button>
-                </AvForm>
-                {console.log(localStorage.getItem("token"))}
+                <div className="container">
+                    <AvForm onValidSubmit={login}>
+                        {/* With AvField */}
+                        <AvField name="username" label="UserName" required/>
+                        <AvField name="password" label="Password" required/>
+                        <Button type="submit">Kirish</Button>
+                    </AvForm>
+                    {console.log(localStorage.getItem("token"))}
+                </div>
             </div>
         );
     }
